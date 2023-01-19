@@ -5,10 +5,16 @@ public class MyDate {
     int year;
     int month;
 
+    { // for bonus lab
+        day = 1;
+        month = 1;
+        year = 2001;
+    }
+
     public MyDate() {}
 
     public MyDate(int m, int d, int y) {
-
+        setDate(m, d, y);
     }
 
     public void setDate(int m, int d, int y) {
@@ -17,7 +23,7 @@ public class MyDate {
         this.year = y;
     }
 
-    public String toString() {
-        return "";
+    public String toString() { // strictly, i'd have to care about putting 01 rather than 1
+        return this.day + "/" + this.month + "/" + this.year;
     }
 }

@@ -20,11 +20,13 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -110,6 +112,21 @@
       <workItem from="1673934636775" duration="1786000" />
       <workItem from="1674052294778" duration="906000" />
     </task>
+    <task id="LOCAL-00001" summary="section 3 end _ before bonus lab">
+      <created>1674116930258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674116930258</updated>
+    </task>
+    <task id="LOCAL-00002" summary="section 3 end _ after bonus lab">
+      <created>1674117162914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674117162914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +142,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="section 3 end _ before bonus lab" />
+    <MESSAGE value="section 3 end _ after bonus lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 3 end _ after bonus lab" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
