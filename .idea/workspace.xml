@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec9990eb-8170-40e4-9fe9-9c060169944c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/acme/utils/TestMyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ec9990eb-8170-40e4-9fe9-9c060169944c" name="Changes" comment="section 3 end _ after bonus lab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/acme/utils/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acme/utils/MyDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/acme/utils/MyDateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/acme/utils/MyDateTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +23,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -70,6 +70,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
@@ -90,7 +91,11 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shi_임시\Documents\shi_github\udemy_java8\src" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.acme.utils" />
       <recent name="org.example" />
     </key>
   </component>
@@ -127,8 +132,23 @@
       <workItem from="1673934636775" duration="1786000" />
       <workItem from="1674115296270" duration="176000" />
       <workItem from="1674115621114" duration="134000" />
-      <workItem from="1674115763696" duration="1013000" />
+      <workItem from="1674115763696" duration="1578000" />
     </task>
+    <task id="LOCAL-00001" summary="section 3 end _ before bonus lab">
+      <created>1674116930258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674116930258</updated>
+    </task>
+    <task id="LOCAL-00002" summary="section 3 end _ after bonus lab">
+      <created>1674117162914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674117162914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +164,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="section 3 end _ before bonus lab" />
+    <MESSAGE value="section 3 end _ after bonus lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="section 3 end _ after bonus lab" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
