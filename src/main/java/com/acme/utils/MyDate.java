@@ -5,6 +5,12 @@ public class MyDate {
     int year;
     int month;
 
+    { // for bonus lab
+        day = 1;
+        month = 1;
+        year = 2001;
+    }
+
     public MyDate() {}
 
     public MyDate(int m, int d, int y) {

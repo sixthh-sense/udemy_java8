@@ -19,5 +19,10 @@ public class TestMyDate {
         System.out.println(str1);
         System.out.println(str2);
         System.out.println(str3);
+
+        // Bonus Lab : defaults January 1, 2000
+        MyDate date4 = new MyDate();
+        String str4 = date4.toString();
+        System.out.println(str4);
     }
 }
