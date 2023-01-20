@@ -1,4 +1,4 @@
-package com.acme.test;
+package com.acme.testing;
 
 import com.acme.utils.MyDate;
 
