@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec9990eb-8170-40e4-9fe9-9c060169944c" name="Changes" comment="i'm not sure about this commit" />
+    <list default="true" id="ec9990eb-8170-40e4-9fe9-9c060169944c" name="Changes" comment="rename package">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,11 +115,11 @@
       </method>
     </configuration>
     <configuration name="TestOrders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.acme.test.TestOrders" />
+      <option name="MAIN_CLASS_NAME" value="com.acme.testing.TestOrders" />
       <module name="udemy_java_basics.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.acme.utils.*" />
+          <option name="PATTERN" value="com.acme.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,7 +183,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674194492784</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="different package, some variables had to become public">
+      <created>1674194965691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674194965691</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rename package">
+      <created>1674195671667</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674195671667</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +220,9 @@
     <MESSAGE value="up to section 4" />
     <MESSAGE value="gitignore _ workspace.xml" />
     <MESSAGE value="i'm not sure about this commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="i'm not sure about this commit" />
+    <MESSAGE value="different package, some variables had to become public" />
+    <MESSAGE value="rename package" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename package" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
