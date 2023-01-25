@@ -24,7 +24,7 @@ public class MyDate {
     }
 
     public String toString() { // strictly, i'd have to care about putting 01 rather than 1
-        return this.day + "/" + this.month + "/" + this.year;
+        return this.month + "/" + this.day + "/" + this.year;
     }
 
     // lab 6 :: list all leap years between 1752(1st modern leap year) and 2020
