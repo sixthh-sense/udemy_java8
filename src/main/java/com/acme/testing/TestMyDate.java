@@ -26,5 +26,8 @@ public class TestMyDate {
         MyDate date4 = new MyDate();
         String str4 = date4.toString();
         System.out.println(str4);
+
+        // lab 6 :; test method leapYears()
+        MyDate.leapYears();
     }
 }

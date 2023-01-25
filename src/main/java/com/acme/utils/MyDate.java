@@ -26,4 +26,16 @@ public class MyDate {
     public String toString() { // strictly, i'd have to care about putting 01 rather than 1
         return this.day + "/" + this.month + "/" + this.year;
     }
+
+    // lab 6 :: list all leap years between 1752(1st modern leap year) and 2020
+    public static void leapYears() {
+        for (int year = 1752; year <= 2020; year += 4) {
+            if (year % 400 == 0) {
+                System.out.println("The year " + year + " is a leap year");
+            } else if (year % 100 != 0) { // (&& year % 4 == 0)
+                System.out.println("The year " + year + " is a leap year");
+                // System.out.println(("year " + year + " is not a leap year"));
+            }
+        }
+    }
 }
