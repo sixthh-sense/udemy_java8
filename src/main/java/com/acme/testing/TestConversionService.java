@@ -47,21 +47,18 @@ public class TestConversionService {
 		System.out.println(ConversionService.pounds(7L)); // long to double
 
 		// compare these results.  Can you tell why they are different?
-		/*
+		// in the small world(range), when things get out of range, they get chunked(precision loss)
 		System.out.println("------------------------------------");
 		float bigGallons = ConversionService.gallons(123456789123456789L);
 		System.out.println(bigGallons);
 		double bigGallons2 = 123456789123456789L * 0.2642;
 		System.out.println(bigGallons2);
-		*/
 
-		/*
 		System.out.println("------------------------------------");
 		int bigGrams = ConversionService.grams(1234567890);
 		System.out.println(bigGrams);
 		long bigGrams2 = 1234567890L * 1000L;
 		System.out.println(bigGrams2);
-		*/
 	}
 
 }
