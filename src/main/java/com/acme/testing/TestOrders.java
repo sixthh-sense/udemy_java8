@@ -33,6 +33,9 @@ public class TestOrders {
 		Order anotherAnvil = new Order(date3, 200, "Road Runner");
 		System.out.println(anotherAnvil);
 
+		// lab 06
+		System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());
+		System.out.println("The total bill for: " + balloons + " is " + balloons.computeTotal());
 	}
 
 }

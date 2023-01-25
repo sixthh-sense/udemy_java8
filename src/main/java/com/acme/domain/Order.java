@@ -39,4 +39,36 @@ public class Order {
 		System.out.println("The tax for this order is: " + orderAmount * Order.taxRate);
 		return orderAmount * Order.taxRate;
 	}
+
+	// lab 6 syntax start
+	public char jobSize() {
+		if (quantity <= 25) {
+			return 'S';
+		} else if (quantity <= 75) {
+			return 'M';
+		} else if (quantity <= 150) {
+			return 'L';
+		}
+		return 'X';
+	}
+
+	public double computeTotal() {
+		double discountRate = 0.00;
+		switch (this.jobSize()) {
+			case 'S':
+				discountRate = 0.00;
+				break;
+			case 'M':
+				discountRate = 0.01;
+				break;
+			case 'L':
+				discountRate = 0.02;
+				break;
+			case 'X':
+				discountRate = 0.03;
+				break;
+		}
+		// 'greater than' 등호 포함 여부가 항상 헷갈림
+		return orderAmount > 1500 ? orderAmount * (1 - discountRate) : orderAmount * (1 - discountRate + taxRate);
+	}
 }
