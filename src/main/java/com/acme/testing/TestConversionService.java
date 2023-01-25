@@ -26,25 +26,25 @@ public class TestConversionService {
 		System.out.println(byteGrams);
 
 		// why do these still work even though the types are different
-		/*
+		// small range -> big range
+		// (when going from big to small u need to cast, but the other way around, it's not necessary)
 		System.out.println("------------------------------------");
-		double ounces = ConversionService.fluidOunces(1.1f);
+		double ounces = ConversionService.fluidOunces(1.1f); // float to double
 		System.out.println(ounces);
-		long milliliters = ConversionService.milliliters(40);
+		long milliliters = ConversionService.milliliters(40); // int to long
 		System.out.println(milliliters);
-		double decimalmilliliters = ConversionService.milliliters(40);
-		System.out.println(decimalmilliliters);
+		double decimalMilliliters = ConversionService.milliliters(40); // int to double
+		System.out.println(decimalMilliliters);
 		short s = 30;
-		System.out.println(ConversionService.grams(s));
+		System.out.println(ConversionService.grams(s)); // short to int
 		byte b = 4;
-		System.out.println(ConversionService.milliliters(b));
+		System.out.println(ConversionService.milliliters(b)); // byte to int
 		char z = 'z';
-		System.out.println(ConversionService.milliliters(z));
-		System.out.println(ConversionService.gallons(200));
-		System.out.println(ConversionService.ounces(50.5f));
-		System.out.println(ConversionService.pints(6L));
-		System.out.println(ConversionService.pounds(7L));
-		*/
+		System.out.println(ConversionService.milliliters(z)); // char to int(get that unicode something)
+		System.out.println(ConversionService.gallons(200)); // int to float
+		System.out.println(ConversionService.ounces(50.5f)); // float to double
+		System.out.println(ConversionService.pints(6L)); // long to float
+		System.out.println(ConversionService.pounds(7L)); // long to double
 
 		// compare these results.  Can you tell why they are different?
 		/*
