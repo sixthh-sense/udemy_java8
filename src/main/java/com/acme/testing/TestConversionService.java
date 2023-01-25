@@ -23,9 +23,9 @@ public class TestConversionService {
 		ConversionService.grams(BigDecimal.valueOf(30)); //  30L -> 30 :: long -> int
 		ConversionService.milliliters((int) 4.0); // 4.0 -> (int) 4.0 or 4? :: double -> int
 		short grams = ConversionService.grams(BigDecimal.valueOf(30)).shortValueExact(); // short grams -> int grams :: short -> int // can't decide what part i should change
-		// byte byteGrams = ConversionService.grams(BigDecimal.valueOf(30)).byteValueExact(); // byte byteGrams -> int byteGrams :: byte -> int // can't decide what part i should change
+		byte byteGrams = ConversionService.grams(BigDecimal.valueOf(30)).byteValue(); // byte byteGrams -> int byteGrams :: byte -> int // can't decide what part i should change
 		System.out.println(grams);
-		// System.out.println(byteGrams);
+		 System.out.println(byteGrams);
 
 		// why do these still work even though the types are different
 		// small range -> big range
@@ -57,8 +57,8 @@ public class TestConversionService {
 		System.out.println(bigGallons2);
 
 		System.out.println("------------------------------------");
-//		int bigGrams = ConversionService.grams(BigDecimal.valueOf(1234567890)).intValueExact();
-//		System.out.println(bigGrams);
+		int bigGrams = ConversionService.grams(BigDecimal.valueOf(1234567890)).intValue();
+		System.out.println(bigGrams);
 		long bigGrams2 = 1234567890L * 1000L;
 		System.out.println(bigGrams2);
 	}
