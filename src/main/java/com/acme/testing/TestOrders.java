@@ -1,6 +1,5 @@
 package com.acme.testing;
 
-import com.acme.domain.Good;
 import com.acme.domain.Good.UnitOfMeasureType;
 import com.acme.domain.Solid;
 import com.acme.utils.MyDate;

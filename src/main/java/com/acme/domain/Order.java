@@ -97,7 +97,7 @@ public class Order {
 		quantity = q;
 	}
 	public Order(MyDate d, double amt, String c) {
-		this(d, amt, c, new Good("Acme Anvil", 1668, 0.3, Good.UnitOfMeasureType.CUBIC_METER, false, 500), 1);
+		this(d, amt, c, new Solid("Acme Anvil", 1668, 0.3, Good.UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3), 1);
 	}
 	public String toString(){
 		return quantity + " ea. " + product + " for " + customer; 
