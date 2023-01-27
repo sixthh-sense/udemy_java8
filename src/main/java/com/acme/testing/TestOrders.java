@@ -11,16 +11,18 @@ public class TestOrders {
 		MyDate date2 = new MyDate(4,10,2008);
 		Order balloons = new Order(date2, 1000.00, "Bugs Bunny", "Balloon", 125);
 
+		balloons.setQuantity(-200); // lab 08 test code
+
 		System.out.println(anvil);
 		System.out.println(balloons);
 
-		System.out.println("The tax rate is currently: " + Order.taxRate);
+		System.out.println("The tax rate is currently: " + Order.getTaxRate());
 		Order.computeTaxOn(3000.00);
 		anvil.computeTax();
 		balloons.computeTax();
 
 		Order.setTaxRate(0.06);
-		System.out.println("The tax rate is currently: " + Order.taxRate);
+		System.out.println("The tax rate is currently: " + Order.getTaxRate());
 		Order.computeTaxOn(3000.00);
 		anvil.computeTax();
 		balloons.computeTax();
@@ -33,5 +35,4 @@ public class TestOrders {
 		System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());
 		System.out.println("The total bill for: " + balloons + " is " + balloons.computeTotal());
 	}
-
 }

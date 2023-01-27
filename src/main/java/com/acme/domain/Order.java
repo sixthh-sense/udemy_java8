@@ -3,19 +3,86 @@ package com.acme.domain;
 import com.acme.utils.MyDate;
 
 public class Order {
-	MyDate orderDate;
-	double orderAmount = 0.00;
-	String customer;
-	String product;
-	int quantity;
-	public static double taxRate;
 
-	static {
-		taxRate = 0.05;
+	private MyDate orderDate;
+	private double orderAmount = 0.00;
+	private String customer;
+	private String product;
+	private int quantity;
+	private static double taxRate = 0.05;
+
+//	static {
+//		taxRate = 0.05;
+//	}
+
+	// getters & setters
+	public MyDate getOrderDate() {
+		return orderDate;
 	}
 
-	public static void setTaxRate(double newRate) {
-		taxRate = newRate;
+	public void setOrderDate(MyDate orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public double getOrderAmount() {
+		return orderAmount;
+	}
+
+	public void setOrderAmount(double orderAmount) {
+		if (positive(orderAmount, quantity)) {
+			this.orderAmount = orderAmount;
+		}
+	}
+
+	public String getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(String customer) {
+		this.customer = customer;
+	}
+
+	public String getProduct() {
+		return product;
+	}
+
+	public void setProduct(String product) {
+		this.product = product;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		if (positive(orderAmount, quantity)) {
+			this.quantity = quantity;
+		}
+	}
+
+	public static double getTaxRate() {
+		return taxRate;
+	}
+
+	public static void setTaxRate(double taxRate) {
+		Order.taxRate = taxRate;
+	}
+
+	private boolean positive(double orderAmount, int quantity) {
+		//return !(orderAmount <= 0) && quantity > 0;
+		// return orderAmount > 0 && quantity > 0;
+		if (orderAmount > 0 && quantity > 0) {
+			return true;
+		} else {
+			if (orderAmount <= 0) {
+				System.out.println("Attempting to set the orderAmount to a value less than or equal to zero");
+				//System.out.println("order sum is negative or zero value: " + orderAmount);
+			} else {
+				System.out.println("Attempting to set the quantity to a value less than or equal to zero");
+				//System.out.println("quantity is negative or zero value: " + quantity);
+			}
+			return false;
+		}
 	}
 
 	public static void computeTaxOn(double anAmount) {
