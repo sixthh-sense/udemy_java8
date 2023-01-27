@@ -10,10 +10,19 @@ public class Order {
 	private Product product;
 	private int quantity;
 	private static double taxRate = 0.05;
-
 //	static {
 //		taxRate = 0.05;
 //	}
+	// lab 12 :: step 1
+	public static Rushable rushable;
+
+	public static Rushable getRushable() {
+		return rushable;
+	}
+
+	public static void setRushable(Rushable rushable) {
+		Order.rushable = rushable;
+	}
 
 	// getters & setters
 	public MyDate getOrderDate() {
@@ -68,6 +77,19 @@ public class Order {
 		Order.taxRate = taxRate;
 	}
 
+	// constructors
+	public Order(MyDate d, double amt, String c, Product p, int q){
+		orderDate = d;
+		orderAmount = amt;
+		customer = c;
+		product = p;
+		quantity = q;
+	}
+	public Order(MyDate d, double amt, String c) {
+		this(d, amt, c, new Solid("Acme Anvil", 1668, 0.3, Good.UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3), 1);
+	}
+
+	// methods
 	private boolean positive(double orderAmount, int quantity) {
 		//return !(orderAmount <= 0) && quantity > 0;
 		// return orderAmount > 0 && quantity > 0;
@@ -87,17 +109,6 @@ public class Order {
 
 	public static void computeTaxOn(double anAmount) {
 		System.out.println("The tax for " + anAmount + " is: " + anAmount * Order.taxRate);
-	}
-	
-	public Order(MyDate d, double amt, String c, Product p, int q){
-		orderDate = d;
-		orderAmount = amt;
-		customer = c;
-		product = p;
-		quantity = q;
-	}
-	public Order(MyDate d, double amt, String c) {
-		this(d, amt, c, new Solid("Acme Anvil", 1668, 0.3, Good.UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3), 1);
 	}
 	public String toString(){
 		return quantity + " ea. " + product + " for " + customer; 
@@ -137,5 +148,13 @@ public class Order {
 		}
 		// 'greater than' 등호 포함 여부가 항상 헷갈림
 		return orderAmount > 1500 ? orderAmount * (1 - discountRate) : orderAmount * (1 - discountRate + taxRate);
+	}
+
+	public boolean isPriorityOrder() {
+		boolean priorityOrder = false;
+		if (rushable != null) {
+			priorityOrder = rushable.isRushable(orderDate, orderAmount);
+		}
+		return priorityOrder;
 	}
 }
