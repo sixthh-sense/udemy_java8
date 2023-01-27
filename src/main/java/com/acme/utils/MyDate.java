@@ -2,9 +2,9 @@ package com.acme.utils;
 
 public class MyDate {
 
-    private int day;
-    private int year;
-    private int month;
+    private byte day;
+    private short year;
+    private byte month;
 
     /* for prior bonus lab
     {
@@ -21,7 +21,7 @@ public class MyDate {
 
     public void setDay(int day) {
         if (valid(day, month, year)) {
-            this.day = day;
+            this.day = (byte) day;
         }
     }
 
@@ -31,7 +31,7 @@ public class MyDate {
 
     public void setYear(int year) {
         if (valid(day, month, year)) {
-            this.year = year;
+            this.year = (short) year;
         }
     }
 
@@ -41,7 +41,7 @@ public class MyDate {
 
     public void setMonth(int month) {
         if (valid(day, month, year)) {
-            this.month = month;
+            this.month = (byte) month;
         }
     }
 
@@ -70,9 +70,9 @@ public class MyDate {
 
     public void setDate(int m, int d, int y) {
         if (valid(d, m, y)) {
-            this.month = m;
-            this.day = d;
-            this.year = y;
+            this.month = (byte) m;
+            this.day = (byte) d;
+            this.year = (short) y;
         }
     }
 
