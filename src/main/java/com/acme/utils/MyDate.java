@@ -69,9 +69,11 @@ public class MyDate {
     }
 
     public void setDate(int m, int d, int y) {
-        this.month = m;
-        this.day = d;
-        this.year = y;
+        if (valid(d, m, y)) {
+            this.month = m;
+            this.day = d;
+            this.year = y;
+        }
     }
 
     public String toString() { // strictly, i'd have to care about putting 01 rather than 1
