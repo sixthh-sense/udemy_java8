@@ -7,7 +7,7 @@ public class Order {
 	private MyDate orderDate;
 	private double orderAmount = 0.00;
 	private String customer;
-	private Good product;
+	private Product product;
 	private int quantity;
 	private static double taxRate = 0.05;
 
@@ -42,11 +42,11 @@ public class Order {
 		this.customer = customer;
 	}
 
-	public Good getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(Good product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 
@@ -89,7 +89,7 @@ public class Order {
 		System.out.println("The tax for " + anAmount + " is: " + anAmount * Order.taxRate);
 	}
 	
-	public Order(MyDate d, double amt, String c, Good p, int q){
+	public Order(MyDate d, double amt, String c, Product p, int q){
 		orderDate = d;
 		orderAmount = amt;
 		customer = c;

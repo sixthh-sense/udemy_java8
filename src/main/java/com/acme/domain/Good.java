@@ -1,6 +1,6 @@
 package com.acme.domain;
 
-public abstract class Good {
+public abstract class Good implements Product{
     public enum UnitOfMeasureType {
         LITER, GALLON, CUBIC_METER, CUBIC_FEET
     }
