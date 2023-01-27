@@ -6,6 +6,8 @@ import com.acme.domain.Service;
 import com.acme.utils.MyDate;
 import com.acme.domain.Order;
 
+import java.time.LocalDate;
+
 public class TestOrders {
 	public static void main(String[] args) {
 		MyDate date1 = new MyDate(1,20,2008);
@@ -54,5 +56,22 @@ public class TestOrders {
 		Order.setRushable((orderDate, orderAmount) -> orderAmount > 1500);
 		System.out.println("Anvil isPriorityOrder: " + anvil.isPriorityOrder());
 		System.out.println("Balloons isPriorityOrder: " + balloons.isPriorityOrder());
+
+		// lab 13 :: step 1
+		Order.setRushable((od, oa) -> {
+			LocalDate now = LocalDate.now();
+			LocalDate orderDate = LocalDate.of(od.getYear(), od.getMonth(), od.getDay());
+			LocalDate after30Days = orderDate.plusMonths(1);
+			return now.isAfter(after30Days);
+		});
+
+		// lab 13 :: step 2
+		MyDate hammerDate = new MyDate(1, 26, 2023); // change this date to one that is within the last 15 days of today
+		Solid hammerType = new Solid("Acme Hammer", 281, 0.3, UnitOfMeasureType.CUBIC_METER, false, 100, 0.25, 0.3);
+		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);
+
+		// verify that the anvil is considered a priority item and the hammer is not
+		System.out.println("Anvil isPriorityOrder: " + anvil.isPriorityOrder()); // intended: true
+		System.out.println("Hammer isPriorityOrder: " + hammer.isPriorityOrder()); // intended: false
 	}
 }
