@@ -30,5 +30,15 @@ public class TestMyDate {
 
         // lab 6 :; test method leapYears()
         MyDate.leapYears();
+
+        MyDate newYear = new MyDate(1, 1, 2009);
+        MyDate fiscalStart = new MyDate(1, 1, 2009);
+
+        // lab 10 :: step 2 (if not overriden, hashCode sets them apart from being equal)
+        if (newYear.equals(fiscalStart)) {
+            System.out.println("These two dates are equal");;
+        } else {
+            System.out.println("These two dates are not equal");
+        }
     }
 }

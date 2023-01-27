@@ -88,4 +88,12 @@ public class MyDate {
             }
         }
     }
+
+    public boolean equals(Object o) {
+        if (o instanceof MyDate) {
+            MyDate d = (MyDate) o;
+            return (d.day == day) && (d.month == month) && (d.year == year);
+        }
+        return false;
+    }
 }
