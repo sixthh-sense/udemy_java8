@@ -1,6 +1,6 @@
 package com.acme.domain;
 
-public class Solid extends Good{
+public class Solid extends Good {
 
     private double width;
     private double length;

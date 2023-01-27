@@ -39,5 +39,9 @@ public class TestOrders {
 		// lab 06
 		System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());
 		System.out.println("The total bill for: " + balloons + " is " + balloons.computeTotal());
+
+		// lab 10 :: bonus(step 3)
+		System.out.println("The volume of the anvil is: " + anvil.getProduct().volume());
+		System.out.println("The length of the anvil is: " + ((Solid) anvil.getProduct()).getLength()); // if the product(anvil) was liquid, get radius rather than length
 	}
 }
