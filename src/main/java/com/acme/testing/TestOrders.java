@@ -70,7 +70,6 @@ public class TestOrders {
 		// wanted to have real-time random effect
 		LocalDate within15 = LocalDate.now().minusDays((long)(Math.random() * 16));
 		MyDate hammerDate = new MyDate(within15.getMonthValue(), within15.getDayOfMonth(), within15.getYear());
-		System.out.println("within 15 date: " + hammerDate);
 		Solid hammerType = new Solid("Acme Hammer", 281, 0.3, UnitOfMeasureType.CUBIC_METER, false, 100, 0.25, 0.3);
 		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);
 
