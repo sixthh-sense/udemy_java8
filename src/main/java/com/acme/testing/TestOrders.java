@@ -66,7 +66,11 @@ public class TestOrders {
 		});
 
 		// lab 13 :: step 2
-		MyDate hammerDate = new MyDate(1, 26, 2023); // change this date to one that is within the last 15 days of today
+		// MyDate hammerDate = new MyDate(1, 26, 2023); // change this date to one that is within the last 15 days of today
+		// wanted to have real-time random effect
+		LocalDate within15 = LocalDate.now().minusDays((long)(Math.random() * 16));
+		MyDate hammerDate = new MyDate(within15.getMonthValue(), within15.getDayOfMonth(), within15.getYear());
+		System.out.println("within 15 date: " + hammerDate);
 		Solid hammerType = new Solid("Acme Hammer", 281, 0.3, UnitOfMeasureType.CUBIC_METER, false, 100, 0.25, 0.3);
 		Order hammer = new Order(hammerDate, 10.00, "Wile E Coyote", hammerType, 10);
 
