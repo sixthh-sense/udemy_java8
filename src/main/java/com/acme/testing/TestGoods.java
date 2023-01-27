@@ -34,5 +34,9 @@ public class TestGoods {
 		x = paint;
 		System.out.println("Is " + x + " flammable?  " + x.isFlammable());
 
+		// bonus lab 9 :: step 5
+		System.out.println(glue + " can ship via Post office? " + glue.canShipViaPostOffice());
+		System.out.println(anvil + " can ship via Post office? " + anvil.canShipViaPostOffice());
+		System.out.println(paint + " can ship via Post office? " + paint.canShipViaPostOffice());
 	}
 }

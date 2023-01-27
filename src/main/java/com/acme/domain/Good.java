@@ -83,5 +83,13 @@ public class Good {
         return volume() * weightPerUofM;
     }
 
+    public final boolean canShipViaPostOffice() {
+//        System.out.println("flammable: " + flammable); // just for checking...
+//        System.out.println("weight: " + weight());
+        return (!this.flammable && (weight() < 200));
+    }
 
+//    public final boolean canShipViaPostOffice() { // 'canShipViaPostOffice()' cannot override 'canShipViaPostOffice()' in 'com.acme.domain.Good'; overridden method is final
+//        return true;
+//    }
 }

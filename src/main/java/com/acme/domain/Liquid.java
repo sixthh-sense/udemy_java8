@@ -25,4 +25,8 @@ public class Liquid extends  Good{
     public String toString() {
         return super.toString() + " (liquid) " + volume() + " " + getUnitOfMeasure();
     }
+
+//    public final boolean canShipViaPostOffice() { // 'canShipViaPostOffice()' cannot override 'canShipViaPostOffice()' in 'com.acme.domain.Good'; overridden method is final
+//        return true;
+//    }
 }
