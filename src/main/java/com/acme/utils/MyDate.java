@@ -6,6 +6,8 @@ public class MyDate {
     private short year;
     private byte month;
 
+    private static MyDate[] holidays;
+
     /* for prior bonus lab
     {
         day = 1;
@@ -13,6 +15,16 @@ public class MyDate {
         year = 2001;
     }
     */
+    // lab 14 :: step 1
+    static {
+        holidays = new MyDate[6];
+        holidays[0] = new MyDate(1, 1, 2023);
+        holidays[1] = new MyDate(5, 30, 2023);
+        holidays[2] = new MyDate(7, 4, 2023);
+        holidays[3] = new MyDate(9, 5, 2023);
+        holidays[4] = new MyDate(11, 24, 2023);
+        holidays[5] = new MyDate(12, 25, 2023);
+    }
 
     // getter & setter
     public int getDay() {
@@ -45,6 +57,18 @@ public class MyDate {
         }
     }
 
+    public static MyDate[] getHolidays() { // no setter, just getter
+    return holidays;
+    }
+
+    public static void listHolidays() {
+        System.out.println("the holidays are: ");
+        for (int x = 0; x < holidays.length; x++) {
+            System.out.println(holidays[x]);
+        }
+    }
+
+    // constructor
     public MyDate() {
         this(1, 1, 1900);
     }
