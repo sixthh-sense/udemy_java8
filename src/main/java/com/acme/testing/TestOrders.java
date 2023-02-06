@@ -47,7 +47,9 @@ public class TestOrders {
 		System.out.println("The length of the anvil is: " + ((Solid) anvil.getProduct()).getLength()); // if the product(anvil) was liquid, get radius rather than length
 
 		// lab 11 :: step 5
-		MyDate date3_2 = new MyDate(4, 10, 2008);
+		// MyDate date3_2 = new MyDate(4, 10, 2008);
+		// lab 14 :: step 4
+		MyDate date3_2 = new MyDate(1, 1, 2023);
 		Service s3 = new Service("Road Runner Eradication", 14, false);
 		Order birdEradication = new Order(date3_2, 20000, "Daffy Duck", s3, 1);
 		System.out.println("The total bill for: " + birdEradication + " is " + birdEradication.computeTotal());

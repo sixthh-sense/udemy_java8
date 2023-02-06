@@ -40,5 +40,8 @@ public class TestMyDate {
         } else {
             System.out.println("These two dates are not equal");
         }
+
+        // lab 14 :: step 2
+        MyDate.listHolidays();
     }
 }
