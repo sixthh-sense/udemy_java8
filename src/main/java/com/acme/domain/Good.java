@@ -15,7 +15,7 @@ public abstract class Good implements Product{
     private double weightPerUofM;
 
     //  lab 15 :: step 1
-    private static List catalog;
+    private static Set catalog;
 
     static {
         Liquid glue = new Liquid("Acme Glue", 2334, 4, UnitOfMeasureType.LITER,false, 15, 6);
@@ -27,7 +27,7 @@ public abstract class Good implements Product{
         Liquid nitro = new Liquid("Acme Nitroglycerin", 4289, 1.0,UnitOfMeasureType.CUBIC_METER, true, 1.5, 0.25);
         Liquid oil = new Liquid("Acme Oil", 4275, 1.0,UnitOfMeasureType.CUBIC_METER, true, 1.5, 0.25);
 
-        catalog = new ArrayList();
+        catalog = new HashSet<>(); // ArrayList -> HashSet :: List -> Set
         catalog.add(glue);
         catalog.add(paint);
         catalog.add(anvil);
@@ -38,7 +38,7 @@ public abstract class Good implements Product{
         catalog.add(oil);
     }
 
-    public static List getCatalog() {
+    public static Set getCatalog() {
         return catalog;
     }
 
