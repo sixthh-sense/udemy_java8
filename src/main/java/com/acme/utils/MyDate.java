@@ -63,8 +63,8 @@ public class MyDate {
 
     public static void listHolidays() {
         System.out.println("the holidays are: ");
-        for (int x = 0; x < holidays.length; x++) {
-            System.out.println(holidays[x]);
+        for (MyDate holiday : holidays) {
+            System.out.println(holiday);
         }
     }
 

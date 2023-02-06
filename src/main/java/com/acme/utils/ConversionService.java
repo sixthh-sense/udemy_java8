@@ -72,4 +72,16 @@ public class ConversionService {
         return false;
     }
      */
+
+    // lab 14 :: bonus lab 4.4
+    public static double[][] allKgToPounds(double... kilogramValues) {
+        // code here
+        int length = kilogramValues.length;
+        double[][] answer = new double[length][2];
+        for (int i = 0; i < length; i++) {
+            answer[i][0] = kilogramValues[i];
+            answer[i][1] = pounds(BigDecimal.valueOf(kilogramValues[i])).doubleValue();
+        }
+        return answer;
+    }
 }
