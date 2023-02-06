@@ -41,5 +41,14 @@ public class TestGoods {
 
 		// lab 15 :: step 2
 		System.out.println(Good.getCatalog());
+		// lab 15 :: step 3
+		Good.getCatalog().remove(1); // want to remove "invisible" paint
+		Solid toaster = new Solid("Acme Toaster", 1755, 0.75, Good.UnitOfMeasureType.CUBIC_FEET, false, 1.0, 1.0, 1.0);
+		Good.getCatalog().add(toaster);
+		Good.getCatalog().add(toaster);
+		System.out.println(Good.getCatalog());
+
+		// lab 15 :: step 4
+		System.out.println("Flammable products: " + Good.flammablesList());
 	}
 }

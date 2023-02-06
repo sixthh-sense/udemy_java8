@@ -1,7 +1,6 @@
 package com.acme.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public abstract class Good implements Product{
     public enum UnitOfMeasureType {
@@ -121,4 +120,17 @@ public abstract class Good implements Product{
 //    public final boolean canShipViaPostOffice() { // 'canShipViaPostOffice()' cannot override 'canShipViaPostOffice()' in 'com.acme.domain.Good'; overridden method is final
 //        return true;
 //    }
+
+    // lab 15 :: step 4
+    public static Set flammablesList() {
+        Set flammables = new HashSet();
+        Iterator i = Good.getCatalog().iterator();
+        while (i.hasNext()) {
+            Good x = (Good) i.next();
+            if (x.isFlammable()) {
+                flammables.add(x);
+            }
+        }
+        return flammables;
+    }
 }
