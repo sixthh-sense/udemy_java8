@@ -54,7 +54,23 @@ public class TestGoods {
 		// lab 15 :: step 4
 		System.out.println("Flammable products: " + Good.flammablesList());
 
+		// lab 16 :: step 4(bonus)
+		Good.getCatalog().add(paint);
+
+		// lab 16 :: step 3
 		Collections.sort(Good.getCatalog());
 		System.out.println(Good.getCatalog());
+
+		// lab 16 :: step 4 (bonus)
+		for (Good good : Good.getCatalog()) {
+			if (good.getName().equals("Acme Invisible Paint") && good.getModelNumber() == 2490) {
+				if (Good.getCatalog().indexOf(good) != 3) {
+					int random = (int) (Math.random() * 3);
+					Good.getCatalog().remove(random);
+				}
+				System.out.println("Found " + good.getName() + "-" + good.getModelNumber() + " (liquid) " + good.volume()+ " " + good.getUnitOfMeasure() + " in the catalog at location: " + Good.getCatalog().indexOf(good));
+				break;
+			}
+		}
 	}
 }
