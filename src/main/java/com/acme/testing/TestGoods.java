@@ -4,6 +4,9 @@ import com.acme.domain.Good;
 import com.acme.domain.Liquid;
 import com.acme.domain.Solid;
 
+import java.util.Collections;
+import java.util.List;
+
 /*
 import com.acme.domain.Good;
 import com.acme.domain.Liquid;
@@ -50,5 +53,8 @@ public class TestGoods {
 
 		// lab 15 :: step 4
 		System.out.println("Flammable products: " + Good.flammablesList());
+
+		Collections.sort(Good.getCatalog());
+		System.out.println(Good.getCatalog());
 	}
 }

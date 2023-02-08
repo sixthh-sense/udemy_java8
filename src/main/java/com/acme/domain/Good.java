@@ -2,7 +2,7 @@ package com.acme.domain;
 
 import java.util.*;
 
-public abstract class Good implements Product{
+public abstract class Good implements Product, Comparable<Good> {
     public enum UnitOfMeasureType {
         LITER, GALLON, CUBIC_METER, CUBIC_FEET
     }
@@ -132,5 +132,10 @@ public abstract class Good implements Product{
             }
         }
         return flammables;
+    }
+
+    // lab 16 :: step 3
+    public int compareTo(Good o) {
+        return getName().compareTo(o.getName());
     }
 }
