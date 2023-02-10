@@ -6,7 +6,7 @@ public class MyDate {
     private short year;
     private byte month;
 
-    private static MyDate[] holidays;
+    private final static MyDate[] holidays;
 
     /* for prior bonus lab
     {
@@ -18,12 +18,17 @@ public class MyDate {
     // lab 14 :: step 1
     static {
         holidays = new MyDate[6];
-        holidays[0] = new MyDate(1, 1, 2023);
-        holidays[1] = new MyDate(5, 30, 2023);
-        holidays[2] = new MyDate(7, 4, 2023);
-        holidays[3] = new MyDate(9, 5, 2023);
-        holidays[4] = new MyDate(11, 24, 2023);
-        holidays[5] = new MyDate(12, 25, 2023);
+        try {
+            holidays[0] = new MyDate(1, 1, 2023);
+            holidays[1] = new MyDate(5, 30, 2023);
+            holidays[2] = new MyDate(7, 4, 2023);
+            holidays[3] = new MyDate(9, 5, 2023);
+            holidays[4] = new MyDate(11, 24, 2023);
+            holidays[5] = new MyDate(12, 25, 2023);
+        } catch (InvalidDateException e) {
+            System.out.println("Put valid holidays for default value(s)");
+            System.exit(0);
+        }
     }
 
     // getter & setter
@@ -32,8 +37,12 @@ public class MyDate {
     }
 
     public void setDay(int day) {
-        if (valid(day, month, year)) {
+        try {
+            valid(day, month, year);
             this.day = (byte) day;
+        } catch (InvalidDateException e) {
+            System.out.println("Invalid Date - Exception produced :: Application closing");
+            System.exit(0);
         }
     }
 
@@ -42,8 +51,12 @@ public class MyDate {
     }
 
     public void setYear(int year) {
-        if (valid(day, month, year)) {
+        try {
+            valid(day, month, year);
             this.year = (short) year;
+        } catch (InvalidDateException e) {
+            System.out.println("Invalid Date - Exception produced :: Application closing");
+            System.exit(0);
         }
     }
 
@@ -52,8 +65,12 @@ public class MyDate {
     }
 
     public void setMonth(int month) {
-        if (valid(day, month, year)) {
+        try {
+            valid(day, month, year);
             this.month = (byte) month;
+        } catch (InvalidDateException e) {
+            System.out.println("Invalid Date - Exception produced :: Application closing");
+            System.exit(0);
         }
     }
 
@@ -69,36 +86,50 @@ public class MyDate {
     }
 
     // constructor
-    public MyDate() {
+    public MyDate() throws InvalidDateException {
         this(1, 1, 1900);
     }
 
-    private boolean valid(int day, int month, int year) {
+    private void valid(int day, int month, int year) throws InvalidDateException {
         if (day > 31 || day < 1 || month > 12 || month < 1) {
-            System.out.println("Attempting to create a non-valid date " + month + "/" + day + "/" + year);
-            return false;
+            throw new InvalidDateException(month, day, year);
+            //return false;
         }
         switch (month) {
             case 4:
             case 6:
             case 9:
             case 11:
-                return (day <= 30); // no need for break?
+                //return (day <= 30); // no need for break?
+                if (day > 30) {
+                    throw new InvalidDateException(month, day, year);
+                }
             case 2:
-                return day <= 28 || (day == 29 && year % 4 == 0);
+                // return day <= 28 || (day == 29 && year % 4 == 0);
+                if (day > 28) {
+                    throw new InvalidDateException(month, day, year);
+                }
         }
-        return true;
     }
 
-    public MyDate(int m, int d, int y) {
-        setDate(m, d, y);
+    public MyDate(int m, int d, int y) throws InvalidDateException {
+        try {
+            setDate(m, d, y);
+        } catch (InvalidDateException e) {
+            throw new InvalidDateException(m, d, y);
+        }
     }
 
-    public void setDate(int m, int d, int y) {
-        if (valid(d, m, y)) {
+    public void setDate(int m, int d, int y) throws InvalidDateException {
+        valid(d, m, y);
+        try {
+            valid(d, m, y);
             this.month = (byte) m;
             this.day = (byte) d;
             this.year = (short) y;
+        } catch (InvalidDateException e) {
+            System.out.println("Invalid Date - Exception produced :: Application closing");
+            System.exit(0);
         }
     }
 

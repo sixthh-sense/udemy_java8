@@ -1,10 +1,14 @@
 package com.acme.testing;
 
+import com.acme.utils.InvalidDateException;
 import com.acme.utils.MyDate;
 
 public class TestMyDate {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidDateException {
         MyDate date1 = new MyDate(11, 11, 1918);
+
+        MyDate testDate = new MyDate(151, 11, 1918);
+
         MyDate date2 = new MyDate();
 
         date2.setDay(11);
@@ -36,7 +40,7 @@ public class TestMyDate {
 
         // lab 10 :: step 2 (if not overriden, hashCode sets them apart from being equal)
         if (newYear.equals(fiscalStart)) {
-            System.out.println("These two dates are equal");;
+            System.out.println("These two dates are equal");
         } else {
             System.out.println("These two dates are not equal");
         }

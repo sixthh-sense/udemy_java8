@@ -1,9 +1,10 @@
 package com.acme.testing;
 
+import com.acme.utils.InvalidDateException;
 import com.acme.utils.MyDate;
 
 public class PassByExperiment {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidDateException {
         MyDate date = new MyDate(1, 20, 2008);
         System.out.println("Before passing an object " + date);
         passObject(date);

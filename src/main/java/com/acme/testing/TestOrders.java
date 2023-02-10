@@ -3,13 +3,14 @@ package com.acme.testing;
 import com.acme.domain.Good.UnitOfMeasureType;
 import com.acme.domain.Solid;
 import com.acme.domain.Service;
+import com.acme.utils.InvalidDateException;
 import com.acme.utils.MyDate;
 import com.acme.domain.Order;
 
 import java.time.LocalDate;
 
 public class TestOrders {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidDateException {
 		MyDate date1 = new MyDate(1,20,2008);
 		Solid s1 = new Solid("Acme Anvil", 1668, 0.3, UnitOfMeasureType.CUBIC_METER, false, 500, 0.25, 0.3);
 		Order anvil = new Order(date1, 2000.00, "Wile E Coyote", s1, 10);
@@ -37,6 +38,8 @@ public class TestOrders {
 		MyDate date3 = new MyDate(5, 20, 2008);
 		Order anotherAnvil = new Order(date3, 200, "Road Runner");
 		System.out.println(anotherAnvil);
+
+		// MyDate testDate = new MyDate(55, 20, 2008); // for lab 17 :: bonus test
 
 		// lab 06
 		System.out.println("The total bill for: " + anvil + " is " + anvil.computeTotal());
